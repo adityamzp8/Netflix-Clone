@@ -1,0 +1,391 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background: #000;
+    color: #fff;
+  }
+  
+  .header {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("bg.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 10px 8%;
+    position: relative;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+  
+  .logo {
+    width: 150px;
+    cursor: pointer;
+  }
+  
+  nav button {
+    border: none;
+    outline: none;
+    background-color: #db0001;
+    color: white;
+    padding: 7px 20px;
+    font-size: 1rem;
+    border-radius: 6px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  nav button:hover {
+    background: transparent;
+    color: white;
+    box-shadow: 1px 2px 3px 2px rgb(255, 67, 67);
+    ;
+  }
+  
+  .language-btn {
+    display: inline-block;
+    align-items: center;
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 7px 10px;
+    font-size: 1rem;
+  }
+  
+  .language-btn:hover {
+    background: transparent;
+    box-shadow: 1px 2px 3px 2px rgb(255, 67, 67);
+  }
+  
+  .language-btn img {
+    width: 12px;
+    margin-left: 10px;
+  }
+  
+  .header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-top: 100px;
+  }
+  
+  .header-content h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    font-weight: 700;
+    max-width: 650px;
+  }
+  
+  .header-content h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+  
+  .header-content p {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  
+  .email-signup {
+    background: #fff;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    overflow: hidden;
+  }
+  
+  .email-signup input {
+    flex: 1;
+    border: none;
+    outline: none;
+    margin-left: 20px;
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+  
+  .email-signup button {
+    background: #db0001;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 15px 30px;
+    font-weight: 500;
+    transition: 0.4s all;
+  }
+  
+  .email-signup button:hover {
+    border: none;
+    background-color: rgb(238, 114, 114);
+    color: white;
+  }
+  
+  
+  .features {
+    padding: 50px 12%;
+    font-size: 22px;
+  }
+  
+  .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 50px 0;
+  }
+  
+  .text-col {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .image-col {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .image-col img {
+    display: block;
+    width: 70%;
+    margin: auto;
+  }
+  
+  .features h2 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  .faq {
+    padding: 10px 12%;
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  .faq h2 {
+    font-weight: 500;
+    font-size: 50px;
+  }
+  
+  .Questions {
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+  }
+  
+  .Questions li {
+    width: 100%;
+    list-style: none;
+    padding: 5px;
+  }
+  
+  .Questions li label {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  label::after {
+    content: "+";
+    font-size: 36px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+  }
+  
+  input[type="radio"] {
+    display: none;
+  }
+  
+  .Questions .content {
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+  }
+  
+  .Questions input[type="radio"]:checked+label+.content {
+    max-height: 600px;
+    padding: 30px 20px;
+  }
+  
+  .Questions input[type="radio"]:checked+label::after {
+    transform: rotate(135deg);
+  }
+  
+  .faq small {
+    font-size: 1.2rem;
+  }
+  
+  .faq .email-signup {
+    max-width: 600px;
+    margin: 20px auto 60px;
+  }
+  
+  .footer {
+    padding: 50px 15% 10px;
+    border-top: 6px solid #333;
+    color: #777;
+  }
+  
+  .footer h2 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+  
+  .footer .col {
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+  }
+  
+  .footer .col a {
+    text-decoration: none;
+    display: block;
+    color: #777;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .footer .row {
+    flex: start;
+    padding: 10px 0;
+  }
+  
+  .footer .language-btn {
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+  }
+  
+
+  
+  
+  @media only screen and (max-width: 600px) {
+    .logo {
+      width: 90px;
+    }
+  
+    .nav button {
+      padding: 5px 10px;
+    }
+  
+    nav .language-btn {
+      padding: 6px 10px;
+    }
+  
+    .header-content {
+      padding-top: 150px;
+    }
+  
+    .header-content h1 {
+      font-size: 2.5rem;
+      position: absolute;
+      bottom: 100%;
+      margin: auto;
+    }
+  
+    .header-content h3 {
+      font-size: 1.5rem;
+      margin: auto;
+      position: absolute;
+      top: 15%;
+    }
+  
+    .header-content p {
+      font-size: 1.1rem;
+      position: absolute;
+      bottom: 25%;
+    }
+  
+    .email-signup {
+      position: relative;
+      bottom: 20%;
+    }
+  
+    .email-signup button {
+      padding: 5px 8px;
+      font-size: 12px;
+    }
+  
+    .text-col,
+    .image-col {
+      flex-basis: 100%;
+    }
+  
+    .features h2 {
+      font-size: 30px;
+    }
+  
+    .features p {
+      font-size: 15px;
+    }
+  
+    .row {
+      margin: 5px auto;
+    }
+  
+    .features .row {
+      padding: 10px 0;
+    }
+  
+    .Questions .content {
+      font-size: 15px;
+    }
+  
+    .Questions li label {
+      padding: 10px;
+      font-size: 15px;
+    }
+  
+    label ::after {
+      font-size: 22px;
+    }
+  
+    .faq h2 {
+      font-size: 30px;
+    }
+  
+    .faq,
+    .email-signup {
+      position: relative;
+      bottom: 20%;
+    }
+  
+    .faq,
+    .email-signup button {
+      padding: 7px 8px;
+      font-size: 16px;
+    }
+
+  }
